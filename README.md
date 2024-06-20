@@ -12,5 +12,6 @@ Through comprehensive testing on public datasets, we find that our method outper
   <img src="graph abstract.png" alt="protocol" width="50%">
 </p> 
 
-# Attention
-The neural network models used in this study are provided in the model folder, and more relevant code will be released as it is compiled.
+# Usage
+We provide a pre-trained model for inference use, there are two samples in the data directory, which are PLM features as well as the features involved in the paper, you can refer to the method in the paper to build the features, here due to the limitation, we can't upload the complete data for use, the inference code is used as follows  
+``python inference.py``
