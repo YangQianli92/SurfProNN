@@ -5,6 +5,17 @@ import torch
 import torch.nn as nn
 
 
+def pc_normalize(pc):
+    """
+    Normalize coords for all sample points
+    """
+    centroid = np.mean(pc, axis=0)
+    pc = pc - centroid
+    m = np.max(np.sqrt(np.sum(pc ** 2, axis=1)))
+    pc = pc / m
+    return pc
+
+
 def square_distance(src, dst):
     """
     Calculate Euclid distance between each two points.
