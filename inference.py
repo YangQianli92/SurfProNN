@@ -2,7 +2,7 @@ import os
 
 
 def main():
-  device = torch.device('cuda:0')
+    device = torch.device('cuda:0')
     model = Point_PN_PLM().to(device)
     model.eval()
     checkpoint = torch.load("./checkpoint/best_model.pth")
