@@ -1,5 +1,9 @@
 import os
-from model.surfpro import SufrProNN
+import torch
+import numpy as np
+
+from model.surfpro import SurfProNN
+
 
 def main():
     device = torch.device('cuda:0')
