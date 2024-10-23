@@ -1,9 +1,9 @@
 import os
-
+from model.surfpro import SufrProNN
 
 def main():
     device = torch.device('cuda:0')
-    model = Point_PN_PLM().to(device)
+    model = SufrProNN().to(device)
     model.eval()
     checkpoint = torch.load("./checkpoint/best_model.pth")
     model.load_state_dict(checkpoint['model_state_dict'])
