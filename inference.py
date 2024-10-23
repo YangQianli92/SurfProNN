@@ -2,7 +2,7 @@ import os
 import torch
 import numpy as np
 
-from model.surfpro import SurfProNN
+from model.surfpro import SurfProNN, pc_normalize
 
 
 def main():
