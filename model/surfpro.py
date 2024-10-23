@@ -395,7 +395,7 @@ class EncP(nn.Module):
         return x
 
 
-class SufrProNN(nn.Module):
+class SurfProNN(nn.Module):
     def __init__(
         self,
         in_channels=49,
@@ -455,8 +455,8 @@ if __name__ == "__main__":
     point = torch.rand(32, 49, 1000)  # [B,D,N]  D = 29 + 7(atom_types) + 16(dmasif)
     point = torch.cat([xyz, point], axis=1).to(device)
     plm = torch.rand(32, 2048).to(device)
-    print("===> testing SufrProNN ...")
-    model = SufrProNN().to(device)
+    print("===> testing SurfProNN ...")
+    model = SurfProNN().to(device)
 
     print(
         "The model has {} millions parameterd".format(
